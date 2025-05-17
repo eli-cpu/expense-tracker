@@ -4,11 +4,13 @@ WORKDIR /app
 
 COPY package*.json .
 
+RUN sudo apt install npm
 RUN npm install
-RUN npm install -g http-server
-
+RUN npm run build
 COPY . .
 
-EXPOSE  5173
+EXPOSE  8000
 
+
+CMD [ "cd", "dist" ]
 CMD [ "http-server", "-p", "8000" ]
