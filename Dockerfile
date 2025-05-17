@@ -5,9 +5,10 @@ WORKDIR /app
 COPY package*.json .
 
 RUN npm install
+RUN npm install -g http-server
 
 COPY . .
 
 EXPOSE  5173
 
-CMD [ "npm", "run", "dev" ]
+CMD [ "http-server", "-p", "8000" ]
