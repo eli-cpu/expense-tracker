@@ -9,6 +9,4 @@ COPY . .
 
 EXPOSE  5173
 
-CMD [ "npm", "run", "build"]
-CMD [ "cd", "dist" ]
-CMD [ "npm", "run", "deploy" ]
+CMD [ "npm", "run", "dev" ]
