@@ -13,4 +13,4 @@ EXPOSE  8000
 
 
 CMD [ "cd", "dist" ]
-CMD [ "http-server", "-p", "8000" ]
+CMD [ "npm", "-run", "deploy" ]
