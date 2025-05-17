@@ -1,0 +1,170 @@
+/* Login Page Styles */
+:root {
+  --primary-color: #4c6ef5;
+  --secondary-color: #1d3557;
+  --accent-color: #48bb78;
+  --text-color: #333;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #6c757d;
+  --white: #fff;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7ff 0%, #e0e6ff 100%);
+  padding: 0;
+}
+
+/* Header styling for login page */
+.login-container .header {
+  background-color: transparent;
+  padding: 1rem 2rem;
+  box-shadow: none;
+}
+
+.login-container .logo-container {
+  margin: 0 auto;
+}
+
+.login-container .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+}
+
+.login-title {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.login-subtitle {
+  color: var(--dark-gray);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  padding: 0.8rem;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.2);
+}
+
+.login-button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.login-footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+.toggle-form-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0;
+  margin-left: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.toggle-form-btn:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.back-to-home {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  transition: color 0.3s ease;
+  display: block;
+  width: fit-content;
+  margin: 1.5rem auto 0;
+}
+
+.back-to-home:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 1.5rem;
+  }
+
+  .login-title {
+    font-size: 1.8rem;
+  }
+}
